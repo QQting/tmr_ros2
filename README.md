@@ -365,7 +365,7 @@ In this demo code, the user can use send_script service sending a script to leav
 ``rosdep install --from-paths src --ignore-src -r -y``
 > 5. At the workspace directory to build the download packages and source 'setup.bash' in this workspace to make the worksapce visible to ROS.<br/>
 Note: Do you set ``source /opt/ros/foxy/setup.bash`` ready? Make sure to obtain the correct setup file according to your workspace hierarchy, and then type the following below to compile.<br/>
-``colcon build``<br/>
+``colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release``<br/>
 ``source ./install/setup.bash``<br/>
 > 6. In a new terminal: Source setup.bash in the workspace path and run the driver to connect to TM Robot by typing<br/>
 ``source ./install/setup.bash``<br/>
