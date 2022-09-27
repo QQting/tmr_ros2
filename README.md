@@ -360,15 +360,18 @@ In this demo code, the user can use send_script service sending a script to leav
 ``git clone https://github.com/TechmanRobotInc/tmr_ros2.git``<br/>
 > 3. After the download done, rename the download folder ``tmr_ros2``(or ``tmr_ros2-master``) to ``src`` by typing<br/>
 ``mv tmr_ros2 src``<br/>  (or right-click on the download folder, select "Rename...")<br/>
-> 4. At the workspace directory to build the download packages and source 'setup.bash' in this workspace to make the worksapce visible to ROS.<br/>
+> 4. Install the depedent ROS packages by using rosdep:<br/>
+``cd ~/tmdriver_ws``<br/>
+``rosdep install --from-paths src --ignore-src -r -y``
+> 5. At the workspace directory to build the download packages and source 'setup.bash' in this workspace to make the worksapce visible to ROS.<br/>
 Note: Do you set ``source /opt/ros/foxy/setup.bash`` ready? Make sure to obtain the correct setup file according to your workspace hierarchy, and then type the following below to compile.<br/>
 ``colcon build``<br/>
 ``source ./install/setup.bash``<br/>
-> 5. In a new terminal: Source setup.bash in the workspace path and run the driver to connect to TM Robot by typing<br/>
+> 6. In a new terminal: Source setup.bash in the workspace path and run the driver to connect to TM Robot by typing<br/>
 ``source ./install/setup.bash``<br/>
 ``ros2 run tm_driver tm_driver <robot_ip_address>``<br/>
 The <robot_ip_address> is the IP address of the TM Robot, the user can get it through TM Flow, for example 192.168.10.2<br/>
-> 6. In another new terminal: Source setup.bash in the workspace path and type specific demo node function which the user want to study for applications. For example: the user select to run demo_set_io, the user can type<br/>
+> 7. In another new terminal: Source setup.bash in the workspace path and type specific demo node function which the user want to study for applications. For example: the user select to run demo_set_io, the user can type<br/>
 ``source ./install/setup.bash``<br/>
 ``ros2 run demo demo_set_io``<br/>
 >:warning:[CAUTION] Some demos will let the TM Robot move, please be careful.<br/>

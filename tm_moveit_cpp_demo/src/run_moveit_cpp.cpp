@@ -84,9 +84,9 @@ public:
     box.dimensions = { 0.1, 0.3, 0.1 };
 
     geometry_msgs::msg::Pose box_pose;
-    box_pose.position.x = 0.7;
+    box_pose.position.x = 0.4;
     box_pose.position.y = 0.0;
-    box_pose.position.z = 0.9;
+    box_pose.position.z = 0.6;
 
     collision_object.primitives.push_back(box);
     collision_object.primitive_poses.push_back(box_pose);

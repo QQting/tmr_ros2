@@ -53,7 +53,7 @@ class Talker(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    ip = "192.168.132.242"
+    ip = "192.168.50.117"
 
     node = Talker(ip)
 
